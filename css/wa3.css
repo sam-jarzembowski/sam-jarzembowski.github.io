@@ -8,3 +8,7 @@ th, td {
     text-align: center;
     vertical-align: middle;
   }
+
+h1, h2, h3, p, a, table {
+    font-family: 'Inter', sans-serif;
+}
