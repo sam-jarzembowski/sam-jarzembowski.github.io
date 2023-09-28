@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+  }
+  
+  html {
+    font-family: 'Inclusive Sans', 'sans serif';
+    font-size: 10px;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+  }
