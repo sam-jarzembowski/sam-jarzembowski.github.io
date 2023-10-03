@@ -17,13 +17,15 @@ article {
   margin: 20px auto;
   position: relative;
 
-  background-image: url('../img/ica6-top-image.png');
-  background-repeat: no-repeat;
-
   background-color: white;
 
   border-top: 1mm solid red;
   border-bottom: 1mm solid red;
+
+  background: linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0)20%,rgba(0,0,0,0)80%, rgba(0,0,0,0.2)), url('../img/ica6-top-image.png'), url('../img/ica6-bottom-image.png'), white;
+  background-position: left top,left top, right bottom, left top;
+  background-repeat: no-repeat, no-repeat;
+  
 }
 
 address {
@@ -45,8 +47,6 @@ h1 {
   color: white;
   text-shadow: 1px 1px 1px black;
 
+  filter: drop-shadow(3px 3px black);
   background-image: url(../img/ica6-logo.png);
 }
-
-/* Your CSS below here */
-
