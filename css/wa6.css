@@ -1,5 +1,11 @@
 body {
     background-image: url('../img/cubuffs.jpg');
+    font-family: 'Kanit', sans-serif;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 50px;
 }
 
 .espn {
@@ -8,10 +14,18 @@ body {
 }
 
 .win {
-    background-color: white;
-    height: 200px;
-    width: 900px;
+    background-color: rgba(255, 255, 255, 0.354);
+    height: 400px;
+    width: 400px;
 
     position: absolute;
-    bottom: 50px;
+
+    left: 50%;
+    top: 50%;
+
+    margin: -200px 0 0 200px;
+
+    text-align: center;
+
+    padding: 20px;
 }
