@@ -19,11 +19,8 @@ h1 {
     width: 400px;
 
     position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    margin: -200px 0 0 200px;
+    bottom: 50px;
+    right: 50px;
 
     text-align: center;
 
