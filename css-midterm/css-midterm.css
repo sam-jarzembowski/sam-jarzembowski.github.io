@@ -1,0 +1,28 @@
+/* 
+
+COLORS:
+Blue Gray - #3B4752
+Gold - #FFC63E
+White - #FFFFFF
+
+*/
+
+body {
+    background-color: #3B4752;
+}
+
+h1 {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 10em;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: linotype-didot, serif;
+    font-weight: 700;
+    font-style: normal; 
+    font-size: 10em;
+    color: #FFC63E;
+}
