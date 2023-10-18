@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #54796d;
+
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+}
+nav {
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: #97bcb0;
+}
+nav a {
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(31, 31, 37);
+}
+
+nav a:hover {
+    color: #54796d;
+    font-weight: bold;
+}
+
+img {
+    width:30vw;
+    height: 30vh;
+}
+
+#white-ball {
+    background-color: whitesmoke;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+
+    animation-duration: 10s;
+    animation-name: ball;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ball {
+    from {
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    40% {
+        margin-left: 30%;
+        margin-top: 50%;
+    }
+    to {
+        margin-left: 95%;
+    }
+}
