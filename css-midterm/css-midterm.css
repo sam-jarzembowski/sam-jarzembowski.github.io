@@ -20,10 +20,10 @@ h1 {
 }
 
 h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 700;
+    font-family: franklin-gothic-urw, serif;
+    font-weight: 500;
     font-style: normal; 
-    font-size: 4em;
+    font-size: 2em;
     color: #FFC63E;
 }
 
@@ -31,12 +31,16 @@ h3 {
     font-family: franklin-gothic-urw, sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 2em;
+    font-size: 1.4em;
     color: #ffffff;
 }
 
 p {
-
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2em;
+    color: #ffffff;
 }
 
 .nav {
@@ -55,7 +59,6 @@ p {
     align-items: center;
     justify-content: baseline;
     justify-content: space-between;
-    overflow: auto;
 }
 
 .logo1 {
@@ -91,15 +94,38 @@ p {
 
 
 .intro {
-    position: absolute;
+    margin: 10em 2em 5em 2em;
+    width: 90%;
     text-align: center;
-    margin: 4em;
-    margin-top: 10em;
+    display: flex;
 }
 
-.events {
-    display: flex;
-    flex-direction: row;
-    gap: 4em;
+.event-container {
+    margin-left: 5%;
+    margin-right: 5%;
 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4em;
+    width: 90%;
+}
+
+.event {
+    flex-basis: 45%;
+}
+
+/* For Larger Screens */
+@media (min-width: 1800px) {
+    .event {
+        flex-basis: 30%;
+    }
+}
+
+/* For Smaller Screens */
+@media (max-width: 800px) {
+    .event {
+        flex-basis: 100%;
+    }
 }
