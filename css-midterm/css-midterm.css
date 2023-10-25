@@ -125,6 +125,55 @@ p {
 
 /* For Smaller Screens */
 @media (max-width: 800px) {
+    .logo1 {
+        font-family: franklin-gothic-urw, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.5em;
+        color: #ffffff;
+        display: inline-block;
+    }
+    
+    .logo2 {
+        font-family: linotype-didot, serif;
+        font-weight: 700;
+        font-style: normal; 
+        font-size: 1.5em;
+        color: #FFC63E;
+        display: inline-block;
+        padding-left: 0.3em;
+    }
+
+    .tickets {
+        background-color: #FFC63E;
+        border: none;
+        
+        padding: 0.5em 0.8em;
+        margin-right: 4.2em;
+    
+        color: #3B4752;
+        font-family: franklin-gothic-urw, sans-serif;
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .intro {
+        margin: 10em 1.8em 3em 1.8em;
+        width: 90%;
+        text-align: left;
+    }
+
     .event {
         flex-basis: 100%;
     }
