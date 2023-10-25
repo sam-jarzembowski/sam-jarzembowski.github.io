@@ -125,6 +125,10 @@ p {
 
 /* For Smaller Screens */
 @media (max-width: 800px) {
+    .nav {
+        height: 2.5em;
+    }
+
     .logo1 {
         font-family: franklin-gothic-urw, sans-serif;
         font-weight: 500;
@@ -169,12 +173,35 @@ p {
     }
 
     .intro {
-        margin: 10em 1.8em 3em 1.8em;
+        margin: 8em 1.8em 3em 1.8em;
         width: 90%;
         text-align: left;
     }
 
     .event {
         flex-basis: 100%;
+    }
+}
+
+/* For Even Smaller Screens */
+@media (max-width: 500px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+        height: 8em;
+        padding: 0.5em 0.5em 2em 0.5em;
+    }
+
+    .tickets {
+        flex-basis: 100%;
+        align-self: center;
+        padding: 0.7em 3em;
+        margin-right: 3em;
+    }
+
+    .intro {
+        margin-top: 12em;
     }
 }
