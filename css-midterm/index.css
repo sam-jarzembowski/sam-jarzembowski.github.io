@@ -102,14 +102,13 @@ p {
 
 .event-container {
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 2%;
 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: flex-start;
     gap: 4em;
-    width: 90%;
 }
 
 .event {
@@ -176,6 +175,10 @@ p {
         margin: 8em 1.8em 3em 1.8em;
         width: 90%;
         text-align: left;
+    }
+
+    .event-container {
+        margin-right: 4%;
     }
 
     .event {
