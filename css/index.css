@@ -1,14 +1,220 @@
-body {
-    margin: 0;
-  }
-  
-  html {
-    font-family: 'Inclusive Sans', 'sans serif';
-    font-size: 10px;
-  }
+/* 
 
-  h1 {
-    font-weight: bold;
-    font-size: 36px;
+COLORS:
+Blue Gray - #3B4752
+Gold - #FFC63E
+White - #FFFFFF
+
+*/
+
+body {
+    background-color: #3b4752e7;
+}
+
+h1 {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: franklin-gothic-urw, serif;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: 2em;
+    color: #FFC63E;
+}
+
+h3 {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.4em;
+    color: #ffffff;
+}
+
+p {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.nav {
+    width: 100%;
+    height: 4em;
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color: #3B4752;
+
+    position: absolute;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo1 {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3em;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.logo2 {
+    font-family: linotype-didot, serif;
+    font-weight: 700;
+    font-style: normal; 
+    font-size: 3em;
+    color: #FFC63E;
+    display: inline-block;
+    padding-left: 0.3em;
+}
+
+.tickets {
+    background-color: #FFC63E;
+    border: none;
+    
+    padding: 0.7em 1em;
+    margin-right: 3em;
+
+    color: #3B4752;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-size: 1.3em;
+}
+
+
+.intro {
+    margin: 10em 3% 5em 3%;
+  
+    align-self: center;
     text-align: center;
-  }
+    display: flex;
+}
+
+.event-container {
+    margin-left: 5%;
+    margin-right: 2%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4em;
+}
+
+.event {
+    flex-basis: 45%;
+}
+
+/* For Larger Screens */
+@media (min-width: 1800px) {
+    .event {
+        flex-basis: 30%;
+    }
+}
+
+/* For Smaller Screens */
+@media (max-width: 800px) {
+    .nav {
+        height: 2.5em;
+    }
+
+    .logo1 {
+        font-family: franklin-gothic-urw, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.5em;
+        color: #ffffff;
+        display: inline-block;
+    }
+    
+    .logo2 {
+        font-family: linotype-didot, serif;
+        font-weight: 700;
+        font-style: normal; 
+        font-size: 1.5em;
+        color: #FFC63E;
+        display: inline-block;
+        padding-left: 0.3em;
+    }
+
+    .tickets {
+        background-color: #FFC63E;
+        border: none;
+        
+        padding: 0.5em 1.2em;
+        margin-right: 4.2em;
+    
+        color: #3B4752;
+        font-family: franklin-gothic-urw, sans-serif;
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .intro {
+        margin: 8em 1.8em 3em 1.8em;
+        width: 90%;
+        text-align: left;
+    }
+
+    .event-container {
+        margin-right: 4%;
+    }
+
+    .event {
+        flex-basis: 100%;
+    }
+}
+
+/* For Even Smaller Screens */
+@media (max-width: 460px) {
+    .nav {
+        flex-direction: row;
+     
+        justify-content: center;
+
+        height: 5em;
+        padding: 0.5em 1em 2em 1em;
+    }
+
+    .logo1 {
+        padding: 0.8em 0em 0em 0.5em;
+        margin-bottom: -4em;
+    }
+
+    .logo2 {
+        margin: -2em 0 0 0.2em;
+    }
+
+    .tickets {
+        flex-basis: 100%;
+        padding: 0.7em 1.8em;
+        margin: 1.5em 3em 0em 0em;
+
+        justify-content: center;
+    }
+
+    .intro {
+        margin: 9em 2em 3em 1.5em;
+    }
+}
