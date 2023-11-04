@@ -1,0 +1,49 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    width: 350px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+
+  input[type="text"] {
+    padding: 5px;
+    width: 20em;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+  }
+
+  .inputfields {
+    justify-content: center;
+    float: left;
+    padding: 2em;
+  }
+
+  .namefield {
+    padding: 2em;
+  }
+
+  .country {
+    padding: 2em;
+    margin: 2em;
+  }
+
+  .storysection {
+    width: 60%;
+    float: right;
+    padding: 2em;
+  }
+
+  p {
+    background: #315b4a;
+    color: #ece8d8;
+    font-size: 2em;
+    width: 25em;
+    padding: 10px;
+    visibility: hidden;
+  }
