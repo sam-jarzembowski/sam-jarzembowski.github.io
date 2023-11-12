@@ -5,34 +5,43 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const imgArray = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg'];
+const imgArray = ['plane.jpg', 'sky.jpg', 'garden.jpg', '29.jpg', 'playbill.jpg'];
 
 /* Declaring the alternative text for each image file */
 var altDict = {
-    'pic1.jpg' : "alt text",
-    'pic2.jpg' : "alt text",
-    'pic3.jpg' : "alt text",
-    'pic4.jpg' : "alt text",
-    'pic5.jpg' : "alt text",
+    'plane.jpg' : "Sunset viewed from a plane",
+    'sky.jpg' : "Sunset from a balcony",
+    'garden.jpg' : "Floral garden in Los Angeles",
+    '29.jpg' : "29th Street Mall",
+    'playbill.jpg' : "Playbill for Come from Away",
 }
 
 /* Looping through images */
-for (imgage of imgArray) {
+for (img of imgArray) {
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', `../img/wa11/${image}`);
-    newImage.setAttribute('alt', altDict[image]);
+    newImage.setAttribute('src', `../wa/wa11/${img}`);
+    newImage.setAttribute('alt', altDict[img]);
     thumbBar.appendChild(newImage);
+
+    newImage.addEventListener('click', e => {
+        displayedImage.src = e.target.src;
+        displayedImage.alt = e.target.alt;
+    })
+    
 }
 
 /* Wiring up the Darken/Lighten button */
-if (btn.getAttribute('class') === dark ) {
-    btn.setAttribute("class", "light");
-    btn.textContent = "Lighten";
-    overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
-}
+btn.addEventListener('click', () => {
 
-else {
-    btn.setAttribute("class", "dark");
-    btn.textContent = "Darken";
-    overlay.style.backgroundColor = "rgba(0,0,0,0)";
-}
+    if (btn.getAttribute('class') === 'dark' ) {
+        btn.setAttribute("class", "light");
+        btn.textContent = "Lighten";
+        overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
+    }
+
+    else {
+        btn.setAttribute("class", 'dark');
+        btn.textContent = "Darken";
+        overlay.style.backgroundColor = "rgba(0,0,0,0)";
+    }
+});
