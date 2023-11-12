@@ -12,7 +12,7 @@ var altDict = {
     'plane.jpg' : "Sunset viewed from a plane",
     'sky.jpg' : "Sunset from a balcony",
     'garden.jpg' : "Floral garden in Los Angeles",
-    '29.jpg' : "29th Street Mall",
+    '29.jpg' : "29th Street Mall in Boulder",
     'playbill.jpg' : "Playbill for Come from Away",
 }
 
