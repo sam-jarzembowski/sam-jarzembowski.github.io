@@ -11,6 +11,8 @@ async function getQuote() {
         if (!response.ok) {
             throw Error(response.statusTest);
         }
+        const json = await response.json();
+        console.log(json);
     }
 
     // runs if an error occurs above
