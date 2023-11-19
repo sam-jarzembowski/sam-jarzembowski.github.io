@@ -10,7 +10,7 @@ async function getImage() {
         const response = await fetch(img_url);
         const json = await response.json();
         console.log(json);
-        let link = json["url"];
+        let link = json[0]["url"];
         catImage.src = link;
         
     }
