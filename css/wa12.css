@@ -39,9 +39,10 @@ html {
     padding: 20px 50px;
   }
   
-  .quotes {
+  .text {
     padding: 20px 50px;
     min-height: 200px;
+    font-size: 20px;
   }
   
   .step-text {
