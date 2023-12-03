@@ -32,7 +32,7 @@ console.log(employeeInfo);
 const companyInfo = {
     "company" : [
         {
-            "CompanyName" : "Tech Stars",
+            "Name" : "Tech Stars",
             "Website" : "www.techstars.site",
             "Employees" : employeeInfo
         }
@@ -43,28 +43,27 @@ console.log("*** Question 2 ***");
 console.log(companyInfo);
 
 // Q3
-employeeInfo.employees.push(
-    {
-        "Name" : "Anna",
-        "Department" : "Tech",
-        "Designation" : "Executive",
-        "Salary" : "25600",
-        "Raise Eligible" : "false"
-    }
-);
+employeeInfo.employees[3] = {
+    "Name" : "Anna",
+    "Department" : "Tech",
+    "Designation" : "Executive",
+    "Salary" : "25600",
+    "Raise Eligible" : "false"
+};
+
 console.log("*** Question 3 ***");
 console.log(employeeInfo);
 
 // Q4
 let totalSalary = 0;
-for (employee in employeeInfo.employees) {
+for (employee of employeeInfo.employees) {
     totalSalary += parseInt(employee.Salary);
 }
 console.log("*** Question 4 ***");
 console.log('Total salary: $',totalSalary);
 
 // Q5
-for (employee in employeeInfo.employees) {
+for (employee of employeeInfo.employees) {
     if (employee["Raise Eligible"] === "true") {
         employee.Salary = employee.Salary * 1.1;
         employee["Raise Eligible"] = "false";
@@ -75,7 +74,7 @@ console.log(employeeInfo);
 
 // Q6
 const wfh_employees = ["Anna", "Sam"];
-for (employee in employeeInfo.employees) {
+for (employee of employeeInfo.employees) {
     if (wfh_employees.includes(employee["Name"])) {
         employee.wfh = "true";
     }
