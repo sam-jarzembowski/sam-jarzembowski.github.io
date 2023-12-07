@@ -1,0 +1,31 @@
+body {
+    background-color: #3b4752e7;
+    padding-left: 2em;
+    color: #ffffff;
+}
+
+h1 {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2em;
+    color: #FFC63E;
+}
+
+h2 {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3em;
+    color: #FFC63E;
+
+    margin-top: -0.3em;
+}
+
+p {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5em;
+    color: #ffffff;
+}

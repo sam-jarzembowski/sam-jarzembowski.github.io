@@ -33,7 +33,7 @@ function displayQuote(question) {
     questionText.textContent = question;
 
 }
-
+2
 async function displayAnswer() {
     answerText.textContent = answer;
 }
