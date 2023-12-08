@@ -28,6 +28,16 @@ function shuffleOrder(order) {
       return order;
 }
 
+// function: grab user input
+// thank you tutorial republic (https://www.tutorialrepublic.com/faq/how-to-get-the-value-of-text-input-field-using-javascript.php)
+function getInputValue(){
+    // Selecting the input element and get its value 
+    var inputVal = document.getElementById("#js-number-input").value;
+    return inputVal;
+    // Displaying the value
+    // alert(inputVal);
+}
+
 // function: update stored digits based on user input
 function updateNumber(inputted_number, digit, position) {
     inputted_number[position] = digit;
@@ -47,12 +57,38 @@ function displayPrompt(string) {
 
 
 
+// shuffle order
+shuffleOrder(order);
+
+// iterate through full phone number
+let i = 0;
+while (i <= 9) {
+
+    // ask question
+    displayPrompt(prompt_array[order[i]]);
+
+    //
+    temp_input = getInputValue();
+
+    //
+    updateNumber(inputted_number, temp_input, i);
+
+    // display number
+    displayNumber(inputted_number, displayed_number);
+
+
+
+
+    i++;
+}
 
 
 
 
 
 
+
+/*
 // testing
 console.log(shuffleOrder(order));
 displayPrompt(prompt_array[1]);
@@ -60,3 +96,6 @@ console.log(inputted_number);
 updateNumber(inputted_number, 2, 0);
 console.log(inputted_number);
 displayNumber(inputted_number, displayed_number);
+*/
+
+
