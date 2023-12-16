@@ -12,9 +12,19 @@ const btnJ = document.getElementById("#js-btnJ").addEventListener('click', addIn
 //let clearBtn = document.getElementById("#js-clear").addEventListener('click', clear);
 
 let enteredNumber = document.getElementById("#js-number");
+console.log(enteredNumber);
 
 let numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let tempNum = 0;
+
+// function: when button is pressed, add corresponding number 
+function addInput(pos) {
+    //console.log(typeof enteredNumber);
+    console.log(typeof document.getElementById(`#js-btn${pos}`).innerText);
+    //enteredNumber.textContent = enteredNumber.textContent + document.getElementById(`#js-btn${pos}`).innerText;
+
+    console.log(document.getElementById(`#js-btn${pos}`).innerText);
+}
 
 // function: clear and reset 
 const clear = () => {
@@ -28,12 +38,8 @@ const clear = () => {
     console.log("Clear");
 };
 
-// function: when button is pressed, add corresponding number 
-function addInput(pos) {
-    enteredNumber.textContent = enteredNumber.textContent + document.getElementById(`#js-btn${pos}`).innerText;
 
-    console.log(document.getElementById(`#js-btn${pos}`).innerText);
-}
+/*
 
 // function: shuffle the number order
 // thank you stack overflow for helping me with a shuffle algorithm
@@ -52,3 +58,5 @@ function randomizeNumbers() {
     
       return numArray;
 }
+
+*/

@@ -42,3 +42,29 @@ p {
     font-size: 1.5em;
     color: #3b4752e7;
 }
+
+.clearbutton {
+    background-color: #3b4752e7;
+    border: none;
+    margin-top: 1.3em;
+    padding: 0.6em;
+
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1em;
+    color: #ffffffe7;
+}
+
+.submitbutton {
+    background-color: #FFC63E;
+    border: none;
+    margin-top: 1.3em;
+    padding: 0.6em;
+
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1em;
+    color: #3b4752e7;
+}
