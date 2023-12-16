@@ -1,6 +1,3 @@
-// idea: have it ask for the digits individually in a randomized order
-// after submission, say "Thank you! A representative will give you a call shortly"
-
 let displayed_number = document.getElementById('#js-number');
 const displayed_prompt = document.getElementById('#js-question');
 let inputted_number = ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'];
@@ -32,8 +29,6 @@ btn9.addEventListener("click", () => addInput(9));
 const btn0 = document.getElementById('#js-btn0');
 btn0.addEventListener("click", () => addInput(0));
 
-
-//
 let prompt_array = ['What is the 1st digit of your phone number?', 'What is the 2nd digit of your phone number?', 'What is the 3rd digit of your phone number?', 'What is the 4th digit of your phone number?', 'What is the 5th digit of your phone number?', 'What is the 6th digit of your phone number?', 'What is the 7th digit of your phone number?', 'What is the 8th digit of your phone number?', 'What is the 9th digit of your phone number?', 'What is the 10th digit of your phone number?'];
 
 // function: shuffle the order to ask
@@ -59,8 +54,10 @@ async function updateNumber(inputted_number, digit, position) {
     inputted_number[position] = `${digit}`;
 }
 
-// function: update temp_num to inputted digit
+// function: process a number button press
 async function addInput(num) {
+
+    // update and display with inputted number
     updateNumber(inputted_number, num, order[i]);
     displayNumber(inputted_number, displayed_number);
 
@@ -108,11 +105,11 @@ async function submit() {
 // clear function
 async function clearInput() {
 
-    // reset i to 0
+    // reset
     i = 0;
-
     inputted_number = ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'];
 
+    // begin prompt sequence
     shuffleOrder(order);
     displayNumber(inputted_number, displayed_number);
     displayPrompt(prompt_array[order[i]]);
@@ -122,28 +119,3 @@ async function clearInput() {
 
 // reset upon start
 clearInput();
-
-
-
-
-
-/*
-// testing
-console.log(shuffleOrder(order));
-displayPrompt(prompt_array[1]);
-console.log(inputted_number);
-updateNumber(inputted_number, 2, 0);
-console.log(inputted_number);
-displayNumber(inputted_number, displayed_number);
-
-async function myAsyncFunction() {
-    try {
-      let result = await myPromise;
-      console.log(result);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-*/
-
-
