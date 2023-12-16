@@ -3,8 +3,24 @@
 
 let displayed_number = document.getElementById("#js-number");
 const displayed_prompt = document.getElementById('#js-question');
-let inputted_number = ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x"];
+let inputted_number = [];
 let order = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let temp_num = 0;
+
+const clearbtn = document.getElementById("#js-clear");
+clearbtn.addEventListener('click', clearInput());
+
+const btn1 = document.getElementById("#js-btn1").addEventListener('click', addInput(1));
+const btn2 = document.getElementById("#js-btn2").addEventListener('click', addInput(2));
+const btn3 = document.getElementById("#js-btn3").addEventListener('click', addInput(3));
+const btn4 = document.getElementById("#js-btn4").addEventListener('click', addInput(4));
+const btn5 = document.getElementById("#js-btn5").addEventListener('click', addInput(5));
+const btn6 = document.getElementById("#js-btn6").addEventListener('click', addInput(6));
+const btn7 = document.getElementById("#js-btn7").addEventListener('click', addInput(7));
+const btn8 = document.getElementById("#js-btn8").addEventListener('click', addInput(8));
+const btn9 = document.getElementById("#js-btn9").addEventListener('click', addInput(9));
+const btn0 = document.getElementById("#js-btn0").addEventListener('click', addInput(0));
+
 
 //
 let prompt_array = ['What is the 1st digit of your phone number?', 'What is the 2nd digit of your phone number?', 'What is the 3rd digit of your phone number?', 'What is the 4th digit of your phone number?', 'What is the 5th digit of your phone number?', 'What is the 6th digit of your phone number?', 'What is the 7th digit of your phone number?', 'What is the 8th digit of your phone number?', 'What is the 9th digit of your phone number?', 'What is the 10th digit of your phone number?'];
@@ -21,26 +37,21 @@ function shuffleOrder(order) {
         currentIndex--;
     
         // And swap it with the current element.
-        [order[currentIndex], order[randomIndex]] = [
-          order[randomIndex], order[currentIndex]];
+        [order[currentIndex], order[randomIndex]] = [order[randomIndex], order[currentIndex]];
       }
     
       return order;
 }
 
-// function: grab user input
-// thank you tutorial republic (https://www.tutorialrepublic.com/faq/how-to-get-the-value-of-text-input-field-using-javascript.php)
-function getInputValue(){
-    // Selecting the input element and get its value 
-    var inputVal = document.getElementById("#js-number-input").value;
-    return inputVal;
-    // Displaying the value
-    // alert(inputVal);
-}
-
 // function: update stored digits based on user input
 function updateNumber(inputted_number, digit, position) {
     inputted_number[position] = digit;
+}
+
+// function: update temp_num to inputted digit
+function addInput(num) {
+    temp_num = num;
+    console.log(temp_num);
 }
 
 // function: display current number on screen
@@ -54,6 +65,22 @@ function displayPrompt(string) {
     displayed_prompt.textContent = string;
 }
 
+// clear function
+async function clearInput() {
+    console.log("Clear");
+
+}
+
+
+async function myAsyncFunction() {
+    try {
+      let result = await myPromise;
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
 
 
 
@@ -61,27 +88,14 @@ function displayPrompt(string) {
 shuffleOrder(order);
 
 // iterate through full phone number
-let i = 0;
-while (i <= 9) {
+for (let i = 0; i < 9; i++) {
 
-    // ask question
-    displayPrompt(prompt_array[order[i]]);
-
-    //
-    temp_input = getInputValue();
-
-    //
-    updateNumber(inputted_number, temp_input, i);
-
-    // display number
+    displayPrompt(prompt_array[i]);
+    console.log(temp_num);
+    updateNumber(inputted_number, temp_num, i);
     displayNumber(inputted_number, displayed_number);
 
-
-
-
-    i++;
 }
-
 
 
 
