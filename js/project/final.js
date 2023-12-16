@@ -102,7 +102,7 @@ async function submit() {
     }
 }
 
-// clear function
+// function: clear
 async function clearInput() {
 
     // reset
