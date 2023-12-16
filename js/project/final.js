@@ -3,7 +3,7 @@ const displayed_prompt = document.getElementById('#js-question');
 let inputted_number = ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'];
 let order = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let temp_num = 0;
-var i = 0;
+var i = 0; 
 
 const clearbtn = document.getElementById('#js-clear').addEventListener("click", clearInput);
 const submitbtn = document.getElementById('#js-submit').addEventListener("click", submit);
